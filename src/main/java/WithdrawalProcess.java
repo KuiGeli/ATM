@@ -7,7 +7,7 @@ public abstract class WithdrawalProcess {
         this.nextBanknote = nextBanknote;
     }
 
-    abstract boolean isWithdrawn (int money);
+    abstract void isWithdrawn (int money);
 
 
 }

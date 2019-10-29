@@ -4,17 +4,15 @@ import org.junit.Test;
 public class BankNoteTest {
 
 
-
     @Test
-    public void bankNoteTest(){
+    public void bankNoteTest() {
         BankNote5 lej = new BankNote5(null);
 
-        lej.isWithdrawn(10);
+       lej.isWithdrawn(10);
 
-        Assert.assertTrue(true);
+        Assert.assertEquals(2, lej.getBankNoteCounter());
 
     }
-
 
 
 }

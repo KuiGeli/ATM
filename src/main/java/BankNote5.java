@@ -7,25 +7,30 @@ public class BankNote5 extends WithdrawalProcess {
     private int value = 5;
     private int bankNoteCounter = 0;
 
-    boolean isWithdrawn(int money) {
+    void isWithdrawn(int money) {
+
+        while (money >= value) {
 
 
-        if (money >= value) {
-            while (money >= value) {
-                money -= value;
-                bankNoteCounter++;
+            money -= value;
+            bankNoteCounter++;
 
-                System.out.println(money);
-            }
-            System.out.println(bankNoteCounter + "x: " + value);
-            return true;
-        } else if (nextBanknote != null) {
-            nextBanknote.isWithdrawn(money);
+
+
         }
+        System.out.println(bankNoteCounter + "x: " + value);
+        if (nextBanknote != null) {
+            nextBanknote.isWithdrawn(money);
 
-        return false;
+        }
 
     }
 
+    public int getValue() {
+        return value;
+    }
 
+    public int getBankNoteCounter() {
+        return bankNoteCounter;
+    }
 }

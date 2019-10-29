@@ -4,6 +4,8 @@ public class Main {
 
         WithdrawalProcess withdraw = new BankNote5(new BankNote1(null));
 
+
+
         withdraw.isWithdrawn(12);
 
     }

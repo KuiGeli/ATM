@@ -14,5 +14,9 @@ public class BankAccount {
         money += moneyAdded;
     }
 
+    public void withdrawFromBalance(int takenMoney)
+    {
+        money -= takenMoney;
+    }
 
 }

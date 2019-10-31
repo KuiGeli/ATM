@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ATM1 {
+public class ATM2 {
 
     public static void main(String[] args) {
 
@@ -9,9 +9,9 @@ public class ATM1 {
                 new BankNote10(
                 new BankNote5(
                 new BankNote1
-                (null, 1000), 100),90), 100), 1000);
+                (null, 10000), 1000),100), 600), 100);
 
-
+        int localAvailableMoney = 51000;
         Scanner userInput = new Scanner(System.in);
 
         System.out.println("Please input your account balance. (The amount of money you have on your account balance)");
@@ -26,7 +26,6 @@ public class ATM1 {
 
         boolean isRunning = true;
 
-
         while (isRunning) {
 
             Utils.options();
@@ -37,16 +36,18 @@ public class ATM1 {
                 case 'A':
                     System.out.println("Please input the amount you want to withdraw.");
 
+
                     while (!userInput.hasNextInt()) {
                         Utils.errorMessage();
                         userInput.next();
                     }
                     int money = userInput.nextInt();
-                     withdrawal.withdrawal(money);
-                     account.withdrawFromBalance(money);
+
+                    withdrawal.withdrawal(money);
+                    account.withdrawFromBalance(money);
                     break;
                 case 'B':
-                   withdrawal.banknoteRefill();
+                    withdrawal.banknoteRefill();
                     break;
                 case 'C':
 
@@ -72,5 +73,6 @@ public class ATM1 {
 
 
     }
+
 
 }

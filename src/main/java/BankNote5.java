@@ -18,8 +18,10 @@ public class BankNote5 extends WithdrawalProcess {
             banknotesAvailable--;
         }
 
-        System.out.println(bankNoteCounter + "x: " + value);
-        System.out.println(banknotesAvailable + " banknotes of value " + value + " left");
+        if(bankNoteCounter > 0) {
+            System.out.println(bankNoteCounter + "x: " + value);
+            System.out.println(banknotesAvailable + " banknotes of value " + value + " left");
+        }
         if (nextBanknote != null) {
             nextBanknote.withdrawal(money);
 

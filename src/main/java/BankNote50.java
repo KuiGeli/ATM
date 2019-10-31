@@ -1,11 +1,11 @@
-public class BankNote5 extends WithdrawalProcess {
+public class BankNote50 extends WithdrawalProcess {
 
-    public BankNote5(WithdrawalProcess nextBanknote, int banknoteAvailable) {
+    public BankNote50(WithdrawalProcess nextBanknote, int banknoteAvailable) {
         super(nextBanknote);
         this.banknotesAvailable = banknoteAvailable;
     }
 
-    private int value = 5;
+    private int value = 50;
     private int banknotesAvailable;
     private int bankNoteCounter = 0;
 
@@ -32,6 +32,7 @@ public class BankNote5 extends WithdrawalProcess {
         if(bankNoteCounter > 0){
             System.out.println((bankNoteCounter) + "x banknotes of value " + value + " have been added." );
             banknotesAvailable += bankNoteCounter;
+
         }else if(bankNoteCounter ==0){
             System.out.println("There's no more space for banknotes of value " + value );
         }
@@ -51,4 +52,5 @@ public class BankNote5 extends WithdrawalProcess {
     public int getBanknotesAvailable() {
         return banknotesAvailable;
     }
+
 }
